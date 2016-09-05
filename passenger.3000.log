@@ -1,0 +1,219 @@
+[ 2016-09-05 11:47:01.4043 8335/b6a61740 age/Wat/WatchdogMain.cpp:1291 ]: Starting Passenger watchdog...
+[ 2016-09-05 11:47:01.4144 8338/b6a2d740 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-09-05 11:47:01.4146 8338/b6a2d740 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-09-05 11:47:01.4161 8338/b6a2d740 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 8338
+[ 2016-09-05 11:47:01.4230 8343/b6ae9740 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-09-05 11:47:01.4243 8343/b6ae9740 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 8343
+App 8376 stdout: 
+App 8376 stderr: 
+App 8376 stderr: module.js:340
+App 8376 stderr:     throw err;
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr:  
+App 8376 stderr: ^
+App 8376 stderr: 
+App 8376 stderr: Error: Cannot find module '/home/guillaume/passenger-nodejs-connect-demo/myapp.js'
+App 8376 stderr:     at Function.Module._resolveFilename (module.js:338:15)
+App 8376 stderr:     at Function.Module._load (module.js:280:25)
+App 8376 stderr:     at Module.require (module.js:364:17)
+App 8376 stderr:     at require (module.js:380:17)
+App 8376 stderr:     at loadApplication (/usr/share/passenger/helper-scripts/node-loader.js:180:2)
+App 8376 stderr:     at setupEnvironment (/usr/share/passenger/helper-scripts/node-loader.js:145:2)
+App 8376 stderr:     at /usr/share/passenger/helper-scripts/node-loader.js:68:5
+App 8376 stderr:     at LineReader.readLine (/usr/share/passenger/node/phusion_passenger/line_reader.js:124:3)
+App 8376 stderr:     at readNextOption (/usr/share/passenger/helper-scripts/node-loader.js:66:15)
+App 8376 stderr:     at /usr/share/passenger/helper-scripts/node-loader.js:75:5
+[ 2016-09-05 11:47:03.7385 8338/b585cb40 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /home/guillaume/passenger-nodejs-connect-demo: An error occurred while starting the web application. It exited before signalling successful startup back to Phusion Passenger.
+  Error ID: d2cb9a5c
+  Error details saved to: /tmp/passenger-error-oRPeyN.html
+  Message from application: An error occurred while starting the web application. It exited before signalling successful startup back to Phusion Passenger. Please read <a href="https://github.com/phusion/passenger/wiki/Debugging-application-startup-problems">this article</a> for more information about this problem.<br>
+<h2>Raw process output:</h2>
+<pre>
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module &apos;/home/guillaume/passenger-nodejs-connect-demo/myapp.js&apos;
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at loadApplication (/usr/share/passenger/helper-scripts/node-loader.js:180:2)
+    at setupEnvironment (/usr/share/passenger/helper-scripts/node-loader.js:145:2)
+    at /usr/share/passenger/helper-scripts/node-loader.js:68:5
+    at LineReader.readLine (/usr/share/passenger/node/phusion_passenger/line_reader.js:124:3)
+    at readNextOption (/usr/share/passenger/helper-scripts/node-loader.js:66:15)
+    at /usr/share/passenger/helper-scripts/node-loader.js:75:5
+</pre>
+
+[ 2016-09-05 11:47:03.7424 8338/b615fb40 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is d2cb9a5c. Please see earlier logs for details about the error.
+
+[ 2016-09-05 11:47:22.7605 8338/b615fb40 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 11:47:22.7606 8338/b6a2d740 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 11:47:22.7606 8338/b54ffb40 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-09-05 11:47:22.7606 8338/b54ffb40 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-09-05 11:47:22.7607 8338/b615fb40 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-09-05 11:47:22.7607 8338/b615fb40 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+
+[ 2016-09-05 11:47:22.7609 8343/b6a2cb40 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 11:47:22.7609 8343/b6ae9740 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 11:47:22.7609 8343/b5dffb40 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-09-05 11:47:22.7609 8343/b5dffb40 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-09-05 11:47:22.7611 8343/b6a2cb40 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-09-05 11:47:22.7616 8343/b6ae9740 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-09-05 11:47:22.7842 8338/b6a2d740 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
+[ 2016-09-05 11:47:30.9404 8427/b6ad8740 age/Wat/WatchdogMain.cpp:1291 ]: Starting Passenger watchdog...
+[ 2016-09-05 11:47:30.9475 8430/b6a61740 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-09-05 11:47:30.9481 8430/b6a61740 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-09-05 11:47:30.9497 8430/b6a61740 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 8430
+[ 2016-09-05 11:47:30.9573 8435/b6a68740 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-09-05 11:47:30.9578 8435/b6a68740 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 8435
+App 8474 stdout: 
+App 8474 stderr: 
+App 8474 stderr: module.js:340
+App 8474 stderr:     throw err;
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr:  
+App 8474 stderr: ^
+App 8474 stderr: 
+App 8474 stderr: Error: Cannot find module 'connect'
+App 8474 stderr:     at Function.Module._resolveFilename (module.js:338:15)
+App 8474 stderr:     at Function.Module._load (module.js:280:25)
+App 8474 stderr:     at Module.require (module.js:364:17)
+App 8474 stderr:     at require (module.js:380:17)
+App 8474 stderr:     at Object.<anonymous> (/home/guillaume/passenger-nodejs-connect-demo/app.js:1:77)
+App 8474 stderr:     at Module._compile (module.js:456:26)
+App 8474 stderr:     at Object.Module._extensions..js (module.js:474:10)
+App 8474 stderr:     at Module.load (module.js:356:32)
+App 8474 stderr:     at Function.Module._load (module.js:312:12)
+App 8474 stderr:     at Module.require (module.js:364:17)
+[ 2016-09-05 11:47:33.2773 8430/b577eb40 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /home/guillaume/passenger-nodejs-connect-demo: An error occurred while starting the web application. It exited before signalling successful startup back to Phusion Passenger.
+  Error ID: 249c0098
+  Error details saved to: /tmp/passenger-error-OuawdJ.html
+  Message from application: An error occurred while starting the web application. It exited before signalling successful startup back to Phusion Passenger. Please read <a href="https://github.com/phusion/passenger/wiki/Debugging-application-startup-problems">this article</a> for more information about this problem.<br>
+<h2>Raw process output:</h2>
+<pre>
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module &apos;connect&apos;
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.&lt;anonymous&gt; (/home/guillaume/passenger-nodejs-connect-demo/app.js:1:77)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Module.require (module.js:364:17)
+</pre>
+
+[ 2016-09-05 11:47:33.2971 8430/b6193b40 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 249c0098. Please see earlier logs for details about the error.
+
+[ 2016-09-05 11:49:03.4996 8430/b6193b40 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 11:49:03.4997 8430/b6a61740 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 11:49:03.4997 8430/b55ffb40 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-09-05 11:49:03.4997 8430/b55ffb40 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-09-05 11:49:03.4999 8430/b6193b40 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-09-05 11:49:03.4999 8430/b6193b40 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+
+[ 2016-09-05 11:49:03.5001 8435/b69abb40 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 11:49:03.5001 8435/b6a68740 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 11:49:03.5001 8435/b5dffb40 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-09-05 11:49:03.5002 8435/b5dffb40 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-09-05 11:49:03.5006 8435/b69abb40 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-09-05 11:49:03.5015 8435/b6a68740 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-09-05 11:49:03.5241 8430/b6a61740 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
+[ 2016-09-05 11:49:26.8844 8565/b6ace740 age/Wat/WatchdogMain.cpp:1291 ]: Starting Passenger watchdog...
+[ 2016-09-05 11:49:26.8920 8568/b6ad0740 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-09-05 11:49:26.8921 8568/b6ad0740 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-09-05 11:49:26.8936 8568/b6ad0740 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 8568
+[ 2016-09-05 11:49:26.9015 8573/b6aa4740 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-09-05 11:49:26.9020 8573/b6aa4740 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 8573
+App 8612 stdout: 
+App 8612 stdout: Example app running inside Passenger.
+
+[ 2016-09-05 12:03:59.5826 8568/b6202b40 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 12:03:59.5827 8568/b6ad0740 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 12:03:59.5827 8568/b6ad0740 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 8612, application /home/guillaume/passenger-nodejs-connect-demo/public (development)
+
+[ 2016-09-05 12:03:59.5828 8573/b69e7b40 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 12:03:59.5828 8573/b6aa4740 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 12:03:59.5829 8573/b5dffb40 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-09-05 12:03:59.5829 8573/b5dffb40 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-09-05 12:03:59.5831 8573/b69e7b40 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-09-05 12:03:59.5834 8573/b6aa4740 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-09-05 12:03:59.6047 8568/b6202b40 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-09-05 12:03:59.6048 8568/b6202b40 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-09-05 12:03:59.6048 8568/b55ffb40 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-09-05 12:03:59.6048 8568/b55ffb40 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-09-05 12:03:59.6049 8568/b6ad0740 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 8612, application /home/guillaume/passenger-nodejs-connect-demo/public (development)
+[ 2016-09-05 12:03:59.7301 8568/b6ad0740 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
+[ 2016-09-05 12:04:08.8632 9533/b6a70740 age/Wat/WatchdogMain.cpp:1291 ]: Starting Passenger watchdog...
+[ 2016-09-05 12:04:08.8709 9536/b6a43740 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-09-05 12:04:08.8710 9536/b6a43740 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-09-05 12:04:08.8726 9536/b6a43740 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 9536
+[ 2016-09-05 12:04:08.8798 9541/b6ac6740 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-09-05 12:04:08.8804 9541/b6ac6740 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 9541
+App 9574 stdout: 
+App 9574 stdout: Example app running inside Passenger.
+
+[ 2016-09-05 12:04:28.8080 9536/b6175b40 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 12:04:28.8080 9536/b6a43740 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 12:04:28.8081 9536/b6a43740 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 9574, application /home/guillaume/passenger-nodejs-connect-demo/public (development)
+[ 2016-09-05 12:04:28.8081 9536/b54ffb40 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-09-05 12:04:28.8081 9536/b54ffb40 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-09-05 12:04:28.8083 9536/b6175b40 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-09-05 12:04:28.8083 9536/b6175b40 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-09-05 12:04:28.8083 9536/b6a43740 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 9574, application /home/guillaume/passenger-nodejs-connect-demo/public (development)
+
+[ 2016-09-05 12:04:28.8086 9541/b6a09b40 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 12:04:28.8087 9541/b6ac6740 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 12:04:28.8087 9541/b5dffb40 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-09-05 12:04:28.8087 9541/b5dffb40 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-09-05 12:04:28.8092 9541/b6a09b40 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-09-05 12:04:28.8094 9541/b6ac6740 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-09-05 12:04:28.9337 9536/b6a43740 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
+[ 2016-09-05 12:04:35.7602 9627/b6a19740 age/Wat/WatchdogMain.cpp:1291 ]: Starting Passenger watchdog...
+[ 2016-09-05 12:04:35.7717 9630/b6a6a740 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-09-05 12:04:35.7719 9630/b6a6a740 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-09-05 12:04:35.7733 9630/b6a6a740 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 9630
+[ 2016-09-05 12:04:35.7817 9635/b6a59740 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-09-05 12:04:35.7823 9635/b6a59740 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 9635
+App 9668 stdout: 
+App 9668 stdout: Example app running inside Passenger.
+
+[ 2016-09-05 13:30:45.7239 9630/b619cb40 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+
+[ 2016-09-05 13:30:45.7241 9630/b6a6a740 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 13:30:45.7240 9635/b699cb40 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-09-05 13:30:45.7406 9635/b6a59740 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-09-05 13:30:45.7241 9630/b6a6a740 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 9668, application /home/guillaume/passenger-nodejs-connect-demo/public (development)
+[ 2016-09-05 13:30:45.7519 9630/b55ffb40 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-09-05 13:30:45.7972 9635/b699cb40 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-09-05 13:30:45.7973 9635/b5dffb40 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-09-05 13:30:45.7973 9635/b5dffb40 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-09-05 13:30:45.7977 9635/b6a59740 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-09-05 13:30:45.8012 9630/b55ffb40 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-09-05 13:30:45.8013 9630/b619cb40 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-09-05 13:30:45.8014 9630/b619cb40 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-09-05 13:30:45.8014 9630/b6a6a740 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 9668, application /home/guillaume/passenger-nodejs-connect-demo/public (development)
+[ 2016-09-05 13:30:46.4781 9630/b6a6a740 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished
